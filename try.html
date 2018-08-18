@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.otgset{
+  width: 60%;
+  position: absolute;
+  padding: 40px 50px 50px 50px;
+  padding-left: 20%;
+
+}
+body{
+    background-color: black;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="consumerdatabase.html">Consumer Information</a>
+  <a href="farmerdatabase.html">Farmer Information</a>
+  <a href="landdatabase.html">Land Information</a>
+  <a href="producedatabase.html">Produce Information</a>
+  <a href="sellerdatabase.html">Seller Information</a>
+  <a href="statistics.html">Statistics</a>
+
+  <!--<a href="delivery_.php">Add Delivery</a>-->
+  
+  <div class="dropdown">
+  <button class="dropbtn">Insert Information</button>
+  <div class="dropdown-content">
+    <a href="insertcustomer_db.html">Consumer Info</a>
+    <a href="farmerinsert.html">Farmer Info</a>
+    <a href="insert_landsize_form.php">Land Size info </a>
+    <a href="insertproduce.html">Produce Info</a>
+    <a href="delivery_.php">Seller Info</a>
+
+  </div>
+</div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Update Information 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="updateconsumer.html">Consumer Info</a>
+      <a href="updatefarmer.html">Farmer Info</a>
+      <a href="updatelandsize.html">Land Size Info </a>
+      <a href="updateproduce.html">Produce Info </a>
+      <a href="updateseller.html">Seller Info </a>
+    </div>
+    
+    <!--/*<div class="dropdown">
+    <button class="dropbtn">Insert Information 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="consumer.html">Consumer Info</a>
+      <a href="update_db.html">Farmer Info</a>
+      <a href="insertlandsize.html">Land Size Info </a>
+      <a href="update_db.html">Produce Info </a>
+      <a href="insertseller.html">Seller Info </a>
+    </div>*/-->
+ 
+  </div> 
+<a href="index.html">Logout</a>
+</div>
+
+<div class = "pic">
+    <img class="otgset"src="/images/market.jpg">
+</div>
+
+    
+</body>
+</html>

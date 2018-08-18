@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <link href="/.c9/css/onthegodatabase.css" type="text/css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/ultimate.css">
+</head>
+
+	<body>
+	    	<header>
+		<nav>
+			<script src="//code.jquery.com/jquery.min.js"></script>
+			
+			<script>
+			$.get("nav.html", function(data){
+				$("#nav-placeholder").replaceWith(data);
+				});
+			</script>
+			
+			<div id="nav-placeholder">
+		</nav>
+	</header><!--
+	    <div class="showbuttons">
+            <a href ="/index.html"><button id="logbut" >Logout</button></a>
+        </div>-->
+       
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+<script>
+ $(document).ready(function(){
+        showUserDetails();
+      });
+    function showUserDetails() {
+              
+              //var str =document.getElementsByTagName("option")[strI].value;
+             // document.getElementById("btnInit").onclick(localStorage.setItem(key, str));
+             var str = "sumn";
+              if (str == "") {
+                  document.getElementById("txtHint").innerHTML = "";
+                  return;
+              } else { 
+                  if (window.XMLHttpRequest) {
+                      // code for IE7+, Firefox, Chrome, Opera, Safari
+                      xmlhttp = new XMLHttpRequest();
+                  } else {
+                      // code for IE6, IE5
+                      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                  xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                  };
+                  xmlhttp.open("GET","/statistics.php",true);
+                  xmlhttp.send();
+                }
+           }
+</script>
+    <div class = "card">
+        <div id ='txtHint'>
+          <!-- <img id ="header" src="/.c9/images/onTheGof.jpg"> -->
+        </div>
+		
+     </div><!--
+       <div class="showbuttons">
+            <a href ="/try.html"><button id="logbut" >Back</button></a>
+        </div>-->
+	</body>
+
+</html>

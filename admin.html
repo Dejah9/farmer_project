@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+		<title>OntheGo - Admin Updates</title>
+		<meta charset="utf-8">
+
+		<link href="/.c9/css/alp.css" type="text/css" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script>
+		$(document).ready(function(){
+        //load dropdown menu using ajax
+            $.ajax({ url: "/bestdriverget.php",
+                context: document.body,
+                success: function (res) {
+                    document.getElementById("bestdbut").innerHTML = res;
+                    //showUserDetails();
+                }
+            });
+      });
+            function f1() {
+		    var x = document.getElementById("updateavg");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			
+			function f2() {
+		    var x = document.getElementById("locationmonitor");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			
+			function f3() {
+		    var x = document.getElementById("jobinfobut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			function f4() {
+		    var x = document.getElementById("vehinvbut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}		
+			
+			function f5() {
+		    var x = document.getElementById("drivinfobut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}	
+			
+			function f6() {
+		    var x = document.getElementById("bestdbut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			
+			function f7() {
+		    var x = document.getElementById("avgvicbut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			function f8(){
+				window.location = "newadminhome.html";
+			}
+			function f9(){
+				window.location = "index.html";
+			}
+			function f10() {
+		    var x = document.getElementById("clientinfobut");
+		    	if (x.style.display === "none") {
+		        	x.style.display = "block";
+		    	} else {
+		        	x.style.display = "none";
+		    	}
+			}
+			
+			function trackFunction(){
+				$.ajax({ url: "/.php",
+		                context: document.body,
+		                success: function (res) {
+		                    document.getElementById("bestdbut").innerHTML = res;
+		                    
+		                }
+		         });
+						
+						    setTimeout(trackFunction, 300000);
+						}
+						
+					trackFunction();
+		</script>
+		<style>
+.dropbtn {
+    background-color: #2495b7;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+
+</head>
+
+
+
+
+	<body>
+		 <div class="showbuttons">
+        </div>
+        
+
+		</div> 
+			
+		
+		<div class=btn>
+			<button onclick="f8()" class="button">Home</button>
+			<button onclick="f10()" class="button">Comsumers Information</button>
+			<button onclick="f3()" class="button">Farmer Information</button>	
+			<button onclick="f4()" class="button">Land Information</button>			
+			<button onclick="f5()" class="button">Produce Information</button>
+			<button onclick="f6()" class="button">Seller Information</button>
+		</div>
+    	</br>
+    
+			<img class="otgset"src="/images/market.jpg">
+        
+
+    	<div id="updateavg" style="display:none;" class="hiddenadjust"> 
+			<h3>Update Average Speed</h1>
+			<form name="message" action="">
+   		   	 <input name="usermsg" type="text" id="usermsg" size="10" />
+           	 <input name="submitmsg" type="submit"  id="submitmsg" value="Update" />
+			</form>
+		</div>
+
+		<div id="locationmosnitor" style="display:none;" class="hiddenadjust"> 
+  
+			<h3>Monitor Driver</h1>
+			<button id="btnInit">Monitor Driver's location</button>
+			<button id="btnStop">Stop monitoring</button>
+			<div id=”info”></div>
+		</div>
+		
+		</br>
+    	<div id="rightpanel" class="hiddenadjust">
+        <div id=”info”></div>
+    	</div>
+    	
+    	<div id="jobinfobut" style="display:none;" class="hiddenadjust">
+    		<h3>Update Job Information</h1>
+			<form method="POST" action="update-jobinfo.php">
+			Driver's ID: <input type ="text" name = "driverid"><br><br>
+			Client's ID: <input type="text" name="clientid"/><br><br>
+			Client's Location: <input type ="text" name = "location"><br><br>
+	        Client's Destination: <input type ="text" name = "destination"><br><br>
+	        Pick Up Instructions: <input type ="text" name = "pickup"><br><br>
+	        Drop Off Instructions: <input type ="text" name = "dropoff"><br><br>
+	        Status: <input type ="text" name = "status"><br><br>
+	        Alias: <input type ="text" name = "alias"><br><br>
+	        Job Time: <input type ="text" name = "jobtime"><br><br>
+	        Additional Information: <input type ="text" name = "addinfo"><br><br>
+       	 	<input type="submit" class="subbtn" value="Update">
+           	</form>	
+			
+		</div>
+
+    	<div id="vehinvbut" style="display:none;" class="hiddenadjust"> 
+  
+			<h3>Update Vehicle Inventory(Add a new vehicle)</h1>
+			<form method = "POST" action="vehicleinventory.php">
+				Driver's ID: <input type ="text" name = "id"><br><br>
+				Year: <input type ="text" name = "year"><br><br>
+		        Make: <input type ="text" name = "make"><br><br>
+		        Model: <input type ="text" name = "model"><br><br>
+		        License Plate: <input type ="text" name = "license"><br><br>
+		        Upload vehicle pic below <br><br>
+		        <input type="file" name="myImage" accept="image/*" /> <br><br>
+           	 	<input type="submit" class="subbtn" value="Update">
+           	</form>	
+           	 
+		</div>	
+		
+			<div id="clientinfobut" style="display:none;" class="hiddenadjust"> 
+			<h3>Update Client Information</h1>
+			<form method = "POST" action="clientinfo.php">
+				Client's ID: <input type ="text" name = "clientid"><br><br>
+				Additional Information: <input type ="text" name = "addinfo"><br><br>
+		        <input type="submit" class="subbtn" value="Update">
+           	</form>	
+           	
+         </div>
+		
+		
+    	<div id="drivinfobut" style="display:none;" class="hiddenadjust"> 
+  
+			<h3>Update Driver  Information</h1>
+			<form method="POST" action="updateDriverinfo.php" method = "POST">
+			 Driver's ID: <input type ="text" name = "driverid">
+           	 Latitude: <input type ="text" name = "latitude">
+           	 Longitude: <input type ="text" name = "longitude">
+			 Status:   <select name="status">
+			        <option value="available">Available</option>
+			        <option value="unavailable">Unavailable</option>
+			    </select>
+           	 </br>
+           	 </br>
+   		   	 <input type="submit" class="subbtn" value="Update">
+			</form>
+		</div>		
+		
+    	<div id="bestdbut" style="display:none;" class="hiddenadjust"> 
+  
+			<h3>Update Best Driver Variables</h1>
+			<form method="POST" action="bestdriver.php">
+				Average Speed(km): <input type ="text" name = "speed"><br><br>
+				Average Vicinity(m): <input type ="text" name = "avgvic"><br><br>
+		        Time Polling(minutes): <input type ="text" name = "timepol"><br><br>
+		        Response Time(seconds): <input type ="text" name = "resptime"><br><br>
+           	 	<input type="submit" class="subbtn" value="Update">
+           	</form>	
+ 
+			
+		</div>
+		
+    	<div id="avgvicbut" style="display:none;" class="hiddenadjust"> 
+  
+			<h3>Update Average Vicinity</h1>
+			<form name="message" action="">
+   		   	 <input name="usermsg" type="text" id="usermsg" size="10" />
+           	 <input name="submitmsg" type="submit"  id="submitmsg" value="Update" />
+			</form>
+		</div>
+		    
+		
+				<div class="sidenav">
+			<a href="adminupdates.html">UPDATES</a>
+			<a href = "onthegodatabase.html"> DATABASE</a>
+		</div>
+		
+
+	</body>
+
+</html>

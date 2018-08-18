@@ -1,0 +1,48 @@
+table{
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%
+}
+
+head{
+    padding-bottom: 10px;
+}
+caption {
+    display: table-caption;
+    text-align: center; 
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(162, 198, 41);
+}
+
+body{
+    background-color: rgb(77, 94, 18);
+}
+
+/*AE code*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #dddddd;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}

@@ -1,0 +1,208 @@
+body {
+  font-family: 'Lora';
+   background: linear-gradient(rgba(105, 105, 105, 0.75), rgba(105, 105, 105, 0.75)), url("/.c9/images/webbg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+img{
+  /*opacity:0.9;*/
+  width: 60%;
+  position: absolute;
+  padding: 40px 50px 50px 50px;
+  padding-left: 18%;
+}
+
+.para{
+  padding:30%;
+  font-family: Oldbasker;
+  text-align: center;
+  color:white;
+  font-size:20px;
+}
+
+#btnInit{
+  width:50%;
+  float:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-right:30px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#logbut {
+    background-color: green;
+    color: white;
+    padding: 14px 47px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /*padding-left:20%;
+    width: 100%;*/
+    display:block;
+    font-size: 14px;
+}
+#signbut {
+    /*background-color: #008CBA;*/
+    background-color: green;
+    color: white;
+    padding: 14px 50px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /*padding-left:20%;
+    /*width: 50%;*/
+    display:block;
+        font-size: 14px;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color:white;
+    border:none;
+}
+
+#hiddenlogbut{
+    background-color: #008CBA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    padding-left:20%;
+    width: 100%;
+    display:block;  
+}
+
+.showbuttons{
+    /*display: inline-block;*/
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 500px;
+    right: 0;
+    width: 50px;
+    height: 100px;
+    margin: auto;
+    padding-top: 30px;
+    padding-left:26%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+p{
+  color: white;
+}
+
+.smalllog{
+    background-color: green;
+    color: white;
+    padding: 10px 47px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /*padding-left:20%;
+    width: 100%;*/
+    display:block;
+}
+
+/* CSS FOR LOGIN FORM */
+body {font-family: Arial, Helvetica, sans-serif;} 
+
+ /*Full-width input fields  */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+		<title>Update Farmer Information</title>
+		<meta charset="utf-8">
+
+		<link href="/.c9/css/newsignupdriver.css" type="text/css" rel="stylesheet">
+<script>
+
+	function f8(){
+				window.location = "/try.html";
+			}
+	
+</script>
+
+</head>
+
+
+
+
+	<body>
+			<header>
+		<nav>
+			<script src="//code.jquery.com/jquery.min.js"></script>
+			
+			<script>
+			$.get("nav.html", function(data){
+				$("#nav-placeholder").replaceWith(data);
+				});
+			</script>
+			
+			<div id="nav-placeholder">
+		</nav>
+	</header>
+
+		<div class="form-style-10">
+		<h1>Update Farmer Information Below</h1>
+		<form method = "POST" action="updatefarmer.php" enctype="multipart/form-data">
+		    <div class="inner-wrap">
+		        ID:  <input type ="text" name = "fid"><br><br> 
+		        Firstname : <input type ="text" name = "fname"><br><br>
+  		        Lastname : <input type ="text" name = "lname"><br><br>
+		        Location : <input type ="text" name = "location"><br><br>
+		        Contact Number : <input type ="text" name = "phone"><br><br>
+		        <input type="submit" value="Update">
+		    </div>
+		 </form> 
+		 	<!-- javascript-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Chart.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	
+	<link rel="stylesheet" href="js/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	
+		<script> 
+	$("#header").load("header.html");
+	$("#footer").load("footer.html");
+	</script>
+	
+	<link href="/css/formpages.css" type="text/css" rel="stylesheet">
+	</body>
+
+</html>

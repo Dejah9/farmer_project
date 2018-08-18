@@ -1,0 +1,101 @@
+<!Doctype html>
+<html>
+<head>
+	<title>DataBase Entry</title>
+
+	<style type="text/css">
+		#chart-container{
+			width: 640px;
+			height: auto;
+		}
+	</style>
+	<script>
+
+	function f8(){
+				window.location = "/try.html";
+			}
+	
+</script>
+</head>
+<body>
+		<header>
+		<nav>
+			<script src="//code.jquery.com/jquery.min.js"></script>
+			
+			<script>
+			$.get("nav.html", function(data){
+				$("#nav-placeholder").replaceWith(data);
+				});
+			</script>
+			
+			<div id="nav-placeholder">
+		</nav>
+	</header>
+	<div id="header"></div>
+  <div class = "body-content">
+<!--
+	<div class = "row">
+		<div class = "column">	    
+			<h3> Add Farmer to Records</h3>
+			<p>Please complete the following.</p>
+			
+			<form id = "Sale_form" class="form" method = "POST" action ="add_farmer.php"
+				enctype="multipart/form-data"> 
+				<div class = "alert alert-success"><?= $_SESSION['message'] ?> </div>
+			
+			    First Name:<input id ="fname" type="text" name="fname" required/>
+				<br>
+				<br>
+				Last Name: <input id ="lname" type="text" name="lname" required />
+				<br>
+				<br>
+				Location: <input id ="location" type="text" name="location" required/>
+				<br>
+				<br>
+				Phone: <input id ="phone" type="text" name="phone" required/>
+				<br>
+				<br>
+				<input type="submit" name="submit" value= "Submit" required/>
+			</form>
+			<br><br>
+		</div>
+	-->	
+		<div class= "column">
+			<h3> Add Produce to Records</h3>
+			<p>Please complete the following.</p>
+			
+			<form id= "produce_form" method = "POST" action ="add_produce.php">
+			    <div class = "alert alert-success"><?= $_SESSION['message'] ?> </div> 
+				Produce: <input type="text" name="food"/><br>
+			<br>	<input type="submit" name="submit" value= "Submit"/>
+			
+
+				
+			</form>
+			
+		</div>
+	</div>
+			
+			<div id="footer"></div>
+
+  </div>
+  </div>
+
+	
+		<!-- javascript-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Chart.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	
+	<link rel="stylesheet" href="js/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<link href="/css/formpages.css" type="text/css" rel="stylesheet">
+
+	<script> 
+	$("#header").load("header.html");
+	$("#footer").load("footer.html");
+	</script>
+	
+	<link href="/css/formpages.css" type="text/css" rel="stylesheet">
+</body>
+</html>
